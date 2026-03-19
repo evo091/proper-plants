@@ -22,7 +22,25 @@ export default function App() {
 
   const removeFromCart = (itemToRemove) => {
     setCart(
-      cart
+      cart.map((item) => item.id === itemToRemove.id
+      ? {...item, quantity: item.quantity - 1}
+      : item,
+      )
+      .filter((item) => item.quantity > 0),
+      );
+  };
 
-  return <></>;
+  return (
+    <>
+      <h1>Proper Plants</h1>
+      <main>
+        <Plants plants={PLANTS} addToCart={addToCart} />
+        <Cart
+          cart={cart}
+          removeFromCart={removeFromCart}
+          addToCart={addToCart}
+        />
+      </main>
+    </>
+  );
 }
