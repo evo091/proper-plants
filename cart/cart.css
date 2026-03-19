@@ -4,6 +4,13 @@
 
 .cart-item {
     padding: .25rem;
+    display: grid;
+    gap: .25rem;
+}
+
+.cart-item-quantity {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .cart-item-quantity span {
