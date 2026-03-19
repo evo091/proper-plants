@@ -1,0 +1,13 @@
+.cart-item:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+
+.cart-item {
+    padding: .25rem;
+}
+
+.cart-item-quantity span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
